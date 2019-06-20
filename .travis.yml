@@ -8,7 +8,7 @@ env:
     - ELECTRON_VERSION="4.0.5" NODE_VERSION="10.11.0"
 
 install:
-  - :; exec ./prepare-${TRAVIS_OS_NAME}.sh
+  - ":; exec ./prepare-${TRAVIS_OS_NAME}.sh"
 
 script:
-  - :; exec ./build-${TRAVIS_OS_NAME}.sh
+  - ":; exec ./build-${TRAVIS_OS_NAME}.sh"
