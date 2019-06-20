@@ -1,3 +1,6 @@
 [submodule "sqlcipher"]
 	path = sqlcipher
 	url = git@github.com:sqlcipher/sqlcipher.git
+[submodule "node-sqlite3"]
+	path = node-sqlite3
+	url = git@github.com:mapbox/node-sqlite3.git

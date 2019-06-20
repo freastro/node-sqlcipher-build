@@ -1,0 +1,14 @@
+language: generic
+os:
+  - osx
+osx_image: xcode9.4
+
+env:
+  matrix:
+    - ELECTRON_VERSION="4.0.5" NODE_VERSION="10.11.0"
+
+install:
+  - :; exec ./prepare-${TRAVIS_OS_NAME}.sh
+
+script:
+  - :; exec ./build-${TRAVIS_OS_NAME}.sh
