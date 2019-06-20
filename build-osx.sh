@@ -11,7 +11,7 @@ make
 popd
 
 pushd node-sqlite3
-npm install --build-from-source --clang=1 --sqlite_libname=sqlcipher --sqlite=../sqlite/ ${GYP_ARGS}
+npm install --build-from-source --clang=1 --sqlite_libname=sqlcipher --sqlite=../sqlcipher/ ${GYP_ARGS}
 node-pre-gyp package ${GYP_ARGS}
 
 sed -e s#.*\"host\":.*#\"host\":\"https://static.freastro.net.s3.amazonaws.com\",# package.json > package.json.new
