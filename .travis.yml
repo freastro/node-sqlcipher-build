@@ -3,6 +3,11 @@ os:
   - osx
 osx_image: xcode9.4
 
+addons:
+  homebrew:
+    packages:
+      - openssl
+
 env:
   matrix:
     - ELECTRON_VERSION="4.0.5" NODE_VERSION="10.11.0"
