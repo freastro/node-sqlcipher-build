@@ -18,6 +18,8 @@ pushd node-sqlite3
 npm install --build-from-source --clang=1 --sqlite_libname=sqlcipher --sqlite="${PREFIX}" ${GYP_ARGS}
 node-pre-gyp package ${GYP_ARGS}
 
-sed -e s#.*\"host\":.*#\"host\":\"https://static.freastro.net.s3.amazonaws.com\",# package.json > package.json.new
-mv package.json.new package.json
-node-pre-gyp publish ${GYP_ARGS}
+if [[ ! -z "${node_pre_gyp_accessKeyId}" && ! -z "${node_pre_gyp_secretAccessKey}" ]]; then
+  sed -e s#.*\"host\":.*#\"host\":\"https://static.freastro.net.s3.amazonaws.com\",# package.json > package.json.new
+  mv package.json.new package.json
+  node-pre-gyp publish ${GYP_ARGS}
+fi
