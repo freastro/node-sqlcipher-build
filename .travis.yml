@@ -8,6 +8,7 @@ addons:
     packages:
       - awscli
       - openssl
+    update: true
 
 env:
   matrix:
