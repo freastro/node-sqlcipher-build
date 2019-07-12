@@ -29,6 +29,6 @@ node-pre-gyp package ${GYP_ARGS}
 if [[ ! -z "${AWS_ACCESS_KEY_ID}" && ! -z "${AWS_SECRET_ACCESS_KEY}" ]]; then
   pushd build/stage
   find sqlite3 -type f -exec aws s3 cp {} s3://static.freastro.net/{} \;
-  aws s3 cp "$(pwd)/../sqlcipher/sqlcipher.dll" s3://static.freastro.net/sqlite3/sqlcipher.dll
+  aws s3 cp "${PREFIX}/sqlcipher.dll" s3://static.freastro.net/sqlite3/sqlcipher.dll
   popd
 fi
