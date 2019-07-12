@@ -13,7 +13,7 @@ addons:
 
 env:
   matrix:
-    - ELECTRON_VERSION="4.0.5" NODE_VERSION="11.10.1"
+    - ELECTRON_VERSION="4.0.5" NODE_VERSION="10.11.0"
 
 install:
   - "./prepare-${TRAVIS_OS_NAME}.sh"
