@@ -3,7 +3,7 @@ set -e
 set -x
 
 unset CC
-GYP_ARGS="--runtime=electron --target=${ELECTRON_VERSION} --dist-url=https://atom.io/download/electron"
+GYP_ARGS=""
 export NVM_HOME="C:\\ProgramData\\nvm"
 export NVM_SYMLINK="C:\\Program Files\\nodejs"
 export PATH="./node_modules/.bin:/c/Tcl/bin:/c/Program Files/Amazon/cfn-bootstrap:/c/Program Files/Amazon/AWSCLI/bin:/c/ProgramData/nvm:/c/Program Files/nodejs:$PATH"

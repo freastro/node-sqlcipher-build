@@ -2,7 +2,7 @@
 set -e
 set -x
 
-GYP_ARGS="--runtime=electron --target=${ELECTRON_VERSION} --dist-url=https://atom.io/download/electron"
+GYP_ARGS=""
 export PATH="./node_modules/.bin:$PATH"
 
 mkdir build
